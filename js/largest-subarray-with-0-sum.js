@@ -30,7 +30,7 @@ let hM = new Map();
 let sum = 0;
 let max_len = 0;
 
-for(let i = 0; i< n-1;i++){
+for (let i = 0; i < n - 1; i++) {
     sum += arr[i]
     if (arr[i] == 0 && max_len == 0)
         max_len = 1;

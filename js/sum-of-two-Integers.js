@@ -17,7 +17,7 @@ Output: 5
 Solution
 
 
-var getSum = function(a, b) {
+var getSum = function (a, b) {
   let carry;
   while ((a & b) !== 0) {
     carry = (a & b) << 1;
@@ -28,4 +28,4 @@ var getSum = function(a, b) {
 };
 
 
-console.log(getSum(3,4))
+console.log(getSum(3, 4))

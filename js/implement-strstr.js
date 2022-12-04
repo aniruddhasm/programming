@@ -15,12 +15,12 @@ string GeeksForGeeks as substring.
 
 */
 
-function strstr(s, x){
-    for (let i=0;i<s.length;i++){
-        for(let j=0;j<x.length;j++){
-            if(s[i+j] != x[j]){
+function strstr(s, x) {
+    for (let i = 0; i < s.length; i++) {
+        for (let j = 0; j < x.length; j++) {
+            if (s[i + j] != x[j]) {
                 break;
-            }else if(j === x.length-1){
+            } else if (j === x.length - 1) {
                 return i
             }
         }

@@ -40,20 +40,20 @@ Constraints:
 */
 
 
-function pushZerosToEnd(arr,n){
-    let i=0;
-    let j=0
+function pushZerosToEnd(arr, n) {
+    let i = 0;
+    let j = 0
     let len = arr.length;
-    while(j<len){
-        if(arr[i]!=0 && arr[j] == 0){
+    while (j < len) {
+        if (arr[i] != 0 && arr[j] == 0) {
             i++;
             j++;
-        } else if(arr[i]!=0 && arr[j] !=0){
+        } else if (arr[i] != 0 && arr[j] != 0) {
             i++;
             j++;
-        } else if (arr[i]==0 && arr[j] ==0){
+        } else if (arr[i] == 0 && arr[j] == 0) {
             j++;
-        } else if(arr[j] != 0 && j<len){
+        } else if (arr[j] != 0 && j < len) {
             [arr[i], arr[j]] = [arr[j], arr[i]]
             i++;
         }
@@ -61,4 +61,4 @@ function pushZerosToEnd(arr,n){
     return arr;
 }
 
-console.log(pushZerosToEnd([3, 5, 0, 0, 4],5)) // 3 5 4 0 0
+console.log(pushZerosToEnd([3, 5, 0, 0, 4], 5)) // 3 5 4 0 0

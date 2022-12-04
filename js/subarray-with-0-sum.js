@@ -10,28 +10,28 @@ Yes
 */
 
 //Solution 1:
-function subArrayExists(arr, n){
-  for(let i = 0; i < n; i++){
-    if(arr[i] === 0) return true
+function subArrayExists(arr, n) {
+  for (let i = 0; i < n; i++) {
+    if (arr[i] === 0) return true
     let sum = 0;
-    for(let j = i; j < n; j++){
+    for (let j = i; j < n; j++) {
       sum += arr[j];
-      if(sum === 0){
+      if (sum === 0) {
         return true
       }
     }
-   }
-   return false
+  }
+  return false
 }
 
 //Solution 2- hashmap
-function subArrayExists(arr, n){
+function subArrayExists(arr, n) {
   const mySet1 = new Set();
   let sum = 0;
-  for(let i = 0; i < n; i++){
-    if(arr[i] === 0) return true
+  for (let i = 0; i < n; i++) {
+    if (arr[i] === 0) return true
     sum += arr[i];
-    if(mySet1.has(sum)){
+    if (mySet1.has(sum)) {
       return true
     }
     mySet1.add(sum);
@@ -40,5 +40,5 @@ function subArrayExists(arr, n){
 }
 
 
-console.log(subArrayExists([4,2,-3,1,6], 5))
+console.log(subArrayExists([4, 2, -3, 1, 6], 5))
 

@@ -12,24 +12,24 @@ much.very.program.this.like.i
 
 */
 
-function reverseWords(s){
+function reverseWords(s) {
     const n = s.length;
     let result = [];
     let word = '';
-    for(let i = 0; i < n; i++){
-       if(s[i] === '.'){
-      result.push(word);
-          word = '';
+    for (let i = 0; i < n; i++) {
+        if (s[i] === '.') {
+            result.push(word);
+            word = '';
         } else {
-          word += s[i];
+            word += s[i];
         }
     }
-    if(s !== word) word += '.';
+    if (s !== word) word += '.';
     const resLen = result.length;
 
-    for(let j = resLen-1; j >= 0 ; j--){
+    for (let j = resLen - 1; j >= 0; j--) {
         word += result[j];
-        if(j !== 0){
+        if (j !== 0) {
             word += '.';
         }
     }

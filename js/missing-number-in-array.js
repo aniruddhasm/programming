@@ -13,13 +13,13 @@ const a = [2];
 const n = 2;
 
 */
-function MissingNumber(a,n){
-	n = a.length;
-	let total = Math.floor((n + 1) * (n + 2) / 2);
-  for(let i = 0; i < a.length; i++){
-  	total -= a[i];
+function MissingNumber(a, n) {
+  n = a.length;
+  let total = Math.floor((n + 1) * (n + 2) / 2);
+  for (let i = 0; i < a.length; i++) {
+    total -= a[i];
   }
   return total;
 }
 
-console.log(MissingNumber(a,n))
+console.log(MissingNumber(a, n))

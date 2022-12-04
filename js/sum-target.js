@@ -11,13 +11,13 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 */
 
-const nums = [2,6,11,7,15], target = 9;
+const nums = [2, 6, 11, 7, 15], target = 9;
 
-function getIndexes(nums, target){
+function getIndexes(nums, target) {
 	let obj = {};
 	const length = nums.length;
 	for (let i = 0; i < length; i++) {
-		if(nums[i] in obj){
+		if (nums[i] in obj) {
 			//return [target-nums[i], nums[i]]; // to get the values
 			return [obj[nums[i]], i]; // to get the index
 		}

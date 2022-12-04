@@ -30,21 +30,21 @@ so on... Modified array is :
 
 
 */
-function rearrange(arr, n){
-    let tmp = []
-    let start = 0;
-    let end = arr.length -1
-    while(start <= end){
-      tmp.push(arr[end]);
-      tmp.push(arr[start]);
-      start++;
-      end--;
-    }
-    for(let i=0; i<tmp.length; i++){
-       arr[i] = tmp[i]
-    }
-    return arr;
+function rearrange(arr, n) {
+  let tmp = []
+  let start = 0;
+  let end = arr.length - 1
+  while (start <= end) {
+    tmp.push(arr[end]);
+    tmp.push(arr[start]);
+    start++;
+    end--;
+  }
+  for (let i = 0; i < tmp.length; i++) {
+    arr[i] = tmp[i]
+  }
+  return arr;
 }
 
 
-console.log(rearrange([1,2,3,4,5,6], 5))
+console.log(rearrange([1, 2, 3, 4, 5, 6], 5))

@@ -35,9 +35,9 @@ after changing this bit to 1 is
 
 */
 
-function setKthBit(n, k){
+function setKthBit(n, k) {
     const mask = 1 << k
     return n | mask
 }
 
-console.log(10,2)
+console.log(10, 2)

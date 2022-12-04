@@ -1,7 +1,7 @@
 // 3. Longest Substring Without Repeating Characters
 // Given a string s, find the length of the longest substring without repeating characters.
 
- 
+
 
 // Example 1:
 
@@ -23,22 +23,22 @@
 // Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 
 const s = "pwwkew";
-function getLongestString(s){
+function getLongestString(s) {
 	let best = '';
-  	let current = '';
+	let current = '';
 	const length = s.length;
 	for (let i = 0; i < length; i++) {
 		let index = current.indexOf(s[i]);
-		if(index !== -1){
-			if(current.length > best.length) best = current;
+		if (index !== -1) {
+			if (current.length > best.length) best = current;
 			current = current.substr(index + 1) + s[i];
 		} else {
 			current += s[i];
 		}
 	}
-	if(current.length > best.length)
+	if (current.length > best.length)
 		best = current;
-	return {"text": best, "length": best.length};
+	return { "text": best, "length": best.length };
 }
 
 console.log(getLongestString(s));

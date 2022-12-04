@@ -23,13 +23,13 @@ these bits, we get 11001, which is B.
 */
 
 function countBitsFlip(a, b) {
-    let n = a ^ b // 110 ^ 101
-    let count = 0;
-    while(n > 0){
-      n = n & (n-1) // This keeps removing the most significant no from the bit i.e.
-      count++
-    }
-    return count;
+  let n = a ^ b // 110 ^ 101
+  let count = 0;
+  while (n > 0) {
+    n = n & (n - 1) // This keeps removing the most significant no from the bit i.e.
+    count++
+  }
+  return count;
 }
 
 console.log(countBitsFlip(20, 25))

@@ -24,19 +24,19 @@ the character which is non-repeating.
 
 */
 
-function nonrepeatingCharacter(s){
+function nonrepeatingCharacter(s) {
     let obj = {};
-    let temp =[]
-    for(let i=0; i<s.length; i++){
-        if(obj[s[i]]){
+    let temp = []
+    for (let i = 0; i < s.length; i++) {
+        if (obj[s[i]]) {
             obj[s[i]] += 1;
         } else {
             obj[s[i]] = 1
         }
     }
 
-    for(const key in obj){
-        if(obj[key] === 1){
+    for (const key in obj) {
+        if (obj[key] === 1) {
             return key;
         }
     }

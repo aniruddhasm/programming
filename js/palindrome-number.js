@@ -6,7 +6,7 @@
 
 //     For example, 121 is a palindrome while 123 is not.
 
- 
+
 
 // Example 1:
 
@@ -30,10 +30,10 @@
 let x = 121;
 
 //iterative approach
-function isPalindromeIterative(number){
-	const length = number.length-1;
+function isPalindromeIterative(number) {
+	const length = number.length - 1;
 	for (let i = 0; i <= length; i++) {
-		if(number[i] !== number[length-i]){
+		if (number[i] !== number[length - i]) {
 			return false;
 		}
 	}
@@ -41,10 +41,10 @@ function isPalindromeIterative(number){
 }
 
 //recursive approach
-function isPalindromeRecursive(number){
-	if(number.length === 1) return true;
-	if(number.length === 2) return number[0] === number[1];
-	if(number[0] === number.slice(-1)) return isPalindromeRecursive(number.slice(1,-1));
+function isPalindromeRecursive(number) {
+	if (number.length === 1) return true;
+	if (number.length === 2) return number[0] === number[1];
+	if (number[0] === number.slice(-1)) return isPalindromeRecursive(number.slice(1, -1));
 	return false;
 }
 

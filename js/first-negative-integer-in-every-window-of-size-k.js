@@ -44,12 +44,12 @@ Expected Auxiliary Space: O(K)
 //Solution - Brute-force method
 
 
-function printFirstNegativeInteger(n, k, arr){
-    let ans = new Array(n-k+1).fill(0);
+function printFirstNegativeInteger(n, k, arr) {
+    let ans = new Array(n - k + 1).fill(0);
     let l = 0
-    for(let i=0; i<n-k+1; i++){
-        for(let j=i; j<i+k && (i+k)<=n;j++){
-            if(arr[j]<0){
+    for (let i = 0; i < n - k + 1; i++) {
+        for (let j = i; j < i + k && (i + k) <= n; j++) {
+            if (arr[j] < 0) {
                 ans[l] = arr[j];
                 break;
             }

@@ -18,27 +18,27 @@ john and the votes he received.
 
 */
 
-function winner(arr, n){
-    let obj = {}
-    for (let i = 0; i < arr.length; i++) {
-       if (obj[arr[i]]) {
-          obj[arr[i]] += 1
-       } else {
-          obj[arr[i]] = 1
-       }
-    }
+function winner(arr, n) {
+   let obj = {}
+   for (let i = 0; i < arr.length; i++) {
+      if (obj[arr[i]]) {
+         obj[arr[i]] += 1
+      } else {
+         obj[arr[i]] = 1
+      }
+   }
 
-    let max = 0
-    let winner = ''
-    for (const key in obj) {
-       if (obj[key] > max) {
-          max = obj[key]
-          winner = key
-       } else if (obj[key] == max && winner > key) {
-          winner = key
-       }
-    }
-    return [winner, max]
+   let max = 0
+   let winner = ''
+   for (const key in obj) {
+      if (obj[key] > max) {
+         max = obj[key]
+         winner = key
+      } else if (obj[key] == max && winner > key) {
+         winner = key
+      }
+   }
+   return [winner, max]
 }
 
-console.log(winner(['andyy','blake','clark'], 3))
+console.log(winner(['andyy', 'blake', 'clark'], 3))
