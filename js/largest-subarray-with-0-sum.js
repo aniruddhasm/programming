@@ -38,10 +38,10 @@ for (let i = 0; i < n - 1; i++) {
     if (sum == 0)
         max_len = i + 1;
 
-    if (hM.get(sum) != null)
-        max_len = Math.max(max_len, Math.abs(i - hM.get(sum)));
+    if (!hM.has(sum))
+        hM.set(sum, i);
     else
-        hM.set(sum, i)
+        max_len = Math.max(max_len, Math.abs(i - hM.get(sum)));
 }
 
 return max_len
