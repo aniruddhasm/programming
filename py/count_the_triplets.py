@@ -30,19 +30,20 @@ Expected Time Complexity: O(N2)
 Expected Auxiliary Space: O(1)
 '''
 
+
 class Solution:
-	def countTriplet(self, arr, n):
-		# code here
-		
-		dt = {};
-		count = 0;
-		
-		for i in range(n):
-		    dt[arr[i]] = i;
-		    
-		for i in range(n-1):
-		    for j in range(i+1, n):
-		        if((arr[i] + arr[j]) in dt):
-		            count += 1;
-		            
-		return count;
+    def countTriplet(self, arr, n):
+        # code here
+
+        dt = {}
+        count = 0
+
+        for i in range(n):
+            dt[arr[i]] = i
+
+        for i in range(n-1):
+            for j in range(i+1, n):
+                if ((arr[i] + arr[j]) in dt):
+                    count += 1
+
+        return count

@@ -37,7 +37,7 @@ Expected Time Complexity: O(LogN).
 Expected Auxiliary Space: O(1).
 '''  
   
-Solution:
+#Solution:
 def checkKthBit(n,k):        
   mask = 1 << k
   return n & mask
