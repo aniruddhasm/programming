@@ -8,13 +8,13 @@ const isPalindromePermutations = (s) => {
   let charCode;
   let count = 0;
   for (let i = 0; i < s.length; i++) {
-    charCode = s[i].charCodeAt(0)
+    charCode = s[i].charCodeAt(0);
     charHash[charCode]++;
 
     if (charHash[charCode] & 1 !== 0) {
-      count++
+      count++;
     } else {
-      count--
+      count--;
     }
 
   }
