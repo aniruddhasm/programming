@@ -39,6 +39,29 @@ def LargButMinFreq(arr, n):
         else:
             dt[arr[i]] = 1
 
+    maxim = 0
+    min_freq = dt[arr[0]]
+    for key, value in dt.items():
+        if value <= min_freq:
+            min_freq = value
+            if maxim < key:
+                maxim = key
+
+    return maxim
+
+
+# solution 2
+def LargButMinFreq(arr, n):
+    # code here
+
+    dt = {}
+
+    for i in range(n):
+        if arr[i] in dt:
+            dt[arr[i]] += 1
+        else:
+            dt[arr[i]] = 1
+
     l = []
     min_freq = dt[arr[0]]
     for key, value in dt.items():
