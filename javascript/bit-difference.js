@@ -27,9 +27,9 @@ function countBitsFlip(a, b) {
   let count = 0;
   while (n > 0) {
     n = n & (n - 1) // This keeps removing the most significant no from the bit i.e.
-    count++
+    count++;
   }
   return count;
 }
 
-console.log(countBitsFlip(20, 25))
+console.log(countBitsFlip(20, 25));
