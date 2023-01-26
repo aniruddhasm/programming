@@ -37,17 +37,16 @@ Expected Auxiliary Space: O(1)
 */
 
 class Solution {
-
     setBits(n) {
-        let c = 0;
-        let r = 0;
+        let count = 0;
+        let remainder = 0;
         while (n > 0) {
-            r = n % 2;
-            if (r == 1) {
-                c++;
+            remainder = n % 2;
+            if (remainder == 1) {
+                count++;
             }
             n = ~~(n / 2);
         }
-        return c;
+        return count;
     }
 }

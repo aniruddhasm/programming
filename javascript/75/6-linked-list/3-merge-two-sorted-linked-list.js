@@ -49,7 +49,7 @@ class Solution {
                 tail.next = head2;
                 head2 = head2.next;
             }
-            tail = tail.next
+            tail = tail.next;
         }
 
         if (head1) {
@@ -58,6 +58,6 @@ class Solution {
             tail.next = head2;
         }
 
-        return dummy.next
+        return dummy.next;
     }
 }
