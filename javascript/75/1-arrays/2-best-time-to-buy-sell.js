@@ -29,7 +29,7 @@ Explanation: In this case, no transactions are done and the max profit = 0.
  */
 var maxProfit = function (prices) {
     let minAmount = prices[0];
-    maxP = 0;
+    let maxP = 0;
     for (let i = 0; i < prices.length; i++) {
         minAmount = Math.min(minAmount, prices[i]);
         let diff = prices[i] - minAmount;
